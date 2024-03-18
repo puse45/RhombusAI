@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  rhombus_be:
+    build: .
+    image: &rhombus_be rhombus_be
+    restart: unless-stopped
+    hostname: rhombus_be
+    container_name: rhombus_be
+
+    command: gunicorn project.wsgi:application --workers 16 --timeout 150 --worker-class gevent --bind 0.0.0.0:8000
+    volumes:
+      - .:/rhombus_be
+      - static_volume:/rhombus_be/static
+      - media_volume:/rhombus_be/media
+    ports:
+      - "8001:8000"
+    networks:
+      - rhombus_be_net
+    env_file:
+      - .env
+
+networks:
+  rhombus_be_net:
+     driver: bridge
+
+volumes:
+  static_volume:
+  media_volume:

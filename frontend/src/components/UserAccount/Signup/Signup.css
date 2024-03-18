@@ -1,0 +1,28 @@
+.signup-form {
+    background-color: white;
+    padding: 2rem;
+    width: 25%;
+    left      : 50%;
+    top       : 50%;
+    position  : absolute;
+    transform : translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.signup-form-forgot {
+    float: right;
+}
+.signup-form-button {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+}
+.form-title {
+    color: #000000;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .signup-form  {
+        width: 80%;
+    }
+}

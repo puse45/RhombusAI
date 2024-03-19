@@ -30,7 +30,7 @@ For a quick setup, utilize Docker.
 
 Ensure that the following port is not occupied by any other service:
 
-- :8001 (Developme[models.py](documents%2Fmodels.py)nt Server)
+- :8001 (Development Server)
 
 ### Deployment Procedure
 
